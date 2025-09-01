@@ -1,0 +1,15 @@
+services:
+    jellyfin:
+        image: jellyfin/jellyfin
+        container_name: jellyfin
+        restart: unless-stopped
+        ports:
+            - '8096:8096'
+        volumes:
+            - ./config:/config
+            - ./cache:/cache
+            - CARPETA_MULTIMEDIA:/media
+            - ./branding/index.html:/jellyfin/jellyfin-web/index.html:ro
+            - ./branding/settings.json:/jellyfin/jellyfin-web/settings.json:ro
+            - ./branding/icons:/jellyfin/jellyfin-web/assets/custom:ro
+            - ./branding/base.css:/jellyfin/jellyfin-web/base.css:ro

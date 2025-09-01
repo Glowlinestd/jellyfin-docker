@@ -1,0 +1,7 @@
+{
+    "titulo": "Titulo",
+    "colorFondo": "#fff",
+    "imagenFondo": true,
+    "desenfoque": 10,
+    "opacidad": 0.2
+}
